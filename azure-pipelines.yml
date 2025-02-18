@@ -15,8 +15,8 @@ steps:
     versionSpec: '11'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'LocalDirectory'
-    jdkFile: ''
-    jdkDestinationDirectory: '/usr/lib/jvm/java-11-openjdk-amd64'
+    jdkFile: '/usr/lib/jvm/java-11-openjdk-amd64'
+    jdkDestinationDirectory: "/builds/binaries/externals"
     cleanDestinationDirectory: true
 
 - task: Maven@3
