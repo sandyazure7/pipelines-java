@@ -10,6 +10,14 @@ pool:
   name: Default
 
 steps:
+- script: 
+    echo "JAVA_HOME_11_X64 is $JAVA_HOME_11_X64"
+    export JAVA_HOME=$JAVA_HOME_11_X64
+    export PATH=$JAVA_HOME/bin:$PATH
+    java -version
+    mvn -v
+    mvn clean install
+  displayName: 'Check Java & Maven and Build'  
 
 - task: Maven@3
   inputs:
