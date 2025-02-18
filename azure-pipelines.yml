@@ -11,11 +11,15 @@ pool:
 
 steps:
 - task: JavaToolInstaller@0
+- task: JavaToolInstaller@1
   inputs:
     versionSpec: '11'
     jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'PreInstalled'
-  
+    jdkSourceOption: 'LocalDirectory'
+    jdkFile: ''
+    jdkDestinationDirectory: '/usr/lib/jvm/java-11-openjdk-amd64'
+    cleanDestinationDirectory: true
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
