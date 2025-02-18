@@ -10,14 +10,6 @@ pool:
   name: Default
 
 steps:
-- task: JavaToolInstaller@1
-  inputs:
-    versionSpec: '11'
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'LocalDirectory'
-    jdkFile: '/usr/lib/jvm/java-11-openjdk-amd64'
-    jdkDestinationDirectory: "/builds/binaries/externals"
-    cleanDestinationDirectory: true
 
 - task: Maven@3
   inputs:
